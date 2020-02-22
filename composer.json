@@ -8,8 +8,9 @@
 		}
 	],
 	"autoload": {
-        "psr-4": {
-            "Zmcms\\Users\\": "vendor/zmcms/users"
+            "psr-4": {
+                "Zmcms\\Users\\": "vendor/zmcms/users"
+	    }
         },
 	"extra": {
     	"laravel": {
