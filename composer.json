@@ -7,5 +7,12 @@
 		"email": "pszkudlarek@zoltanmultimedia.pl"
 		}
 	],
-	"require": {}
+	"require": {},
+	"extra": {
+    		"laravel": {
+    	    		"providers": [
+            			"Zmcms\\Users\\ZmcmsUsersServiceProvider"
+        			]
+    		}
+	}
 }
