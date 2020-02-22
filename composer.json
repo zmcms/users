@@ -1,0 +1,11 @@
+{
+	"name": "zmcms/users",
+	"description": "Zarządzanie użytkownikami systemu",
+	"authors": [
+		{
+		"name": "Piotr Szkudlarek",
+		"email": "pszkudlarek@zoltanmultimedia.pl"
+		}
+	],
+	"require": {}
+}
