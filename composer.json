@@ -8,10 +8,11 @@
 		}
 	],
 	"autoload": {
-            "psr-4": {
-		"Zmcms\\Users\\": ""
-	    }
-        },
+        "psr-4": {
+			"Zmcms\\Users\\": ""
+	    },
+       "files": ["src/helpers.php"]
+    },
 	"extra": {
     	"laravel": {
     	    "providers": [
