@@ -1,1 +1,32 @@
+#zmcms_users_frm_login {
+	border: solid 1px #ccc;
+	width: auto;
+	margin-left: 50%;
+	transform: translate(-50%);
+}
+#zmcms_users_frm_login input{
+	width: 99%; padding: .5rem; border-radius: .3rem;
+	border: solid 1px #444;margin: .5%;
+}
+#zmcms_users_frm_login button{
+	margin-left: 50%;
+    transform: translateX(-50%);
+    background-color: #2e7b29;
+    color: #ffffff;
+    padding: .5rem 1rem;
+    border: solid 1px #000;
+    border-radius: .2rem;
+    font-weight: bold;
+    font-weight: 300;
+}
 
+#zmcms_users_frm_login a{
+    display: inline-block;
+    min-width: 60%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    margin: .2rem 50%;
+    text-align: center;
+}
+    
