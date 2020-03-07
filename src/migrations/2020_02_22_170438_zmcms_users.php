@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 class ZmcmsUsers extends Migration{
 	public function up(){
 		$tblNamePrefix=(Config('database.prefix')??'');
+
 		$tblName=$tblNamePrefix.'frontend_users';
 		Schema::create($tblName, function($table){$table->string('token', 75);}); // token uzytkownika
 		Schema::table($tblName, function($table){$table->string('mail', 50)->unique();}); // e-mail użyty do rejestracji uzytkownika
@@ -27,6 +28,14 @@ class ZmcmsUsers extends Migration{
 		Schema::table($tblName, function($table){$table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));});//Imię
 		Schema::table($tblName, function($table){$table->primary('token');});
 
+		$tblName=$tblNamePrefix.'frontend_users_passwords';
+		Schema::create($tblName, function($table){$table->string('token', 75);}); // token uzytkownika
+		Schema::table($tblName, function($table){$table->string('password', 75);}); // e-mail użyty do rejestracji uzytkownika
+		Schema::table($tblName, function($table){$table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));});//Imię
+		Schema::table($tblName, function($table){$table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));});//Imię
+		Schema::table($tblName, function($table) use ($tblNamePrefix){$table->foreign('token')->references('token')->on($tblNamePrefix.'frontend_users')->onUpdate('cascade')->onDelete('cascade');});
+		Schema::table($tblName, function($table){$table->primary(['token', 'password']);});		
+
 
 		$tblName=$tblNamePrefix.'backend_users';
 		Schema::create($tblName, function($table){$table->string('token', 75);}); // token uzytkownika
@@ -41,14 +50,25 @@ class ZmcmsUsers extends Migration{
 		Schema::table($tblName, function($table){$table->string('ilustration', 255)->nullable();});
 		Schema::table($tblName, function($table){$table->date('birthday')->nullable();}); // Data urodzin
 		Schema::table($tblName, function($table){$table->string('confirmed', 1);});
-		Schema::table($tblName, function($table){$table->tinyInteger('login_try')->default(Config('zmcms.backend_users.max_login_try'));});
-		Schema::table($tblName, function($table){$table->tinyInteger('total_login_try')->default(Config('zmcms.backend_users.max_total_login_try'));});		
+		Schema::table($tblName, function($table){$table->tinyInteger('login_try')->default(Config('zmcms.backend_users.max_login_try'));}); // Dozwolona liczba pomyłek w logowaniu pod rząd
+		Schema::table($tblName, function($table){$table->tinyInteger('total_login_try')->default(Config('zmcms.backend_users.max_total_login_try'));});	//  // Dozwolona liczba pomyłek w logowaniu (łącznie)
+		Schema::table($tblName, function($table){$table->tinyInteger('login_tries');}); // Licznuk pomyłek w logowaniu - po osiągnięciu wartości z `login_try` konto jest blokowane
+		Schema::table($tblName, function($table){$table->tinyInteger('total_login_tries');}); //  // Licznuk pomyłek w logowaniu - po osiągnięciu wartości z `total_login_try` konto jest blokowane
 		Schema::table($tblName, function($table){$table->string('homepage', 70)->default(Config('zmcms.backend_users.default_home_page'));});
 		Schema::table($tblName, function($table){$table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));});//Imię
 		Schema::table($tblName, function($table){$table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));});//Imię
 		Schema::table($tblName, function($table){$table->primary('token');});
 
+
+		$tblName=$tblNamePrefix.'backend_users_passwords';
+		Schema::create($tblName, function($table){$table->string('token', 75);}); // token uzytkownika
+		Schema::table($tblName, function($table){$table->string('password', 75);}); // e-mail użyty do rejestracji uzytkownika
+		Schema::table($tblName, function($table){$table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));});//Imię
+		Schema::table($tblName, function($table){$table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));});//Imię
+		Schema::table($tblName, function($table) use ($tblNamePrefix){$table->foreign('token')->references('token')->on($tblNamePrefix.'backend_users')->onUpdate('cascade')->onDelete('cascade');});
+		Schema::table($tblName, function($table){$table->primary(['token', 'password']);});		
 	}
 	public function down(){
+
 	}
 }
