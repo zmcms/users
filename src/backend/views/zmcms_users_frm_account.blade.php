@@ -78,3 +78,36 @@
     <button id="btn_del" class="del">Usuń użytkownika</button>
 </form>
 @endsection
+
+
+
+<p>Czyli jak przewidzieli psychologowie, lubimy suspens, czerpiemy ze strachu brakującą dawkę adrenaliny, a może jak piszą psychoterapeuci "Za podstawowy aspekt, odpowiadający za zamiłowanie ludzkości do odczuwania strachu, uznawane jest to, że kiedy się boimy, to ta właśnie emocja typowo przesłania wszelkie inne myśli, które wcześniej znajdowały się w naszych głowach".</p>
+<p>Wydaje mi się, że wielu z nas ma teraz w życiu wystarczająco trudno. Dodatkowo negatywne odczucia związane z koronawirusem i związanymi z nim obostrzeniami przechylają szalę niebezpiecznie tylko w jedną stronę negatywnych odczuć. Można wręcz pomyśleć, że żyjemy w czasach ostatecznych.</p>
+<p><strong>Stąd moja kontrpropozycja. Sprawdzony "Książkowy Pakiet Antystresowy", na który składają się następujące tytuły:</strong></p>
+<ul>
+<li>Jaroslav Hašek, <strong>Przygody Dobrego Wojaka Szwejka, t.1.2.</strong></li>
+<li>Charles de Coster,<strong> Przygody Dyla Sowizdrzała i Jagnuszka Poczciwca</strong></li>
+<li>Miguela de Cervantesa,<strong> Przemyślny szlachcic don Kichot z Manczy</strong>, t.1.2.,koniecznie w nowym tłumaczeniu Wojciecha Charchalisa</li>
+<li>Francisco de Quevedo, <span class="citation"><strong> Żywot młodzika niepoczciwego imieniem Pablos czyli wzór dla obieżyświatów i zwierciadło filutów,</strong> w świetnym tłumaczeniu Kaliny Wojciechowskiej</span></li>
+<li>Francois Rabelais, <strong>Gargantua i Pantagruel</strong></li>
+<li>Geoffrey Chauser, <strong>Opowieści kantenberyjskie</strong></li>
+<li>Giovanni Boccaccio, <strong>Dekameron</strong></li>
+<li>Anonim, <strong>Łazik z Tormesu</strong></li>
+<li>Lawrence Sterne, <strong>Życie i myśli JW Pana Tristrama Shandy</strong></li>
+<li>Włodzimierz Wojnowicz, <strong><span class="st">Życie i niezwykłe <em>przygody żołnierza</em> Iwana <em>Czonkina</em></span></strong></li>
+<li>Efraim Sevela<strong>, Monia Cackens</strong></li>
+<li>Karel Čapek, <strong>Bajki i przypowiastki</strong></li>
+<li>Karel Čapek, <strong>Nowele i Opowiadamia</strong></li>
+<li>Bohumil Hrabal,<strong> Postrzyżyny</strong></li>
+<li>Ilf i Pietrow, <strong>Dwanaście krzeseł</strong></li>
+<li><span class="st">Jaroslav <em>Hašek</em></span><strong>,<em>Tasiemiec Księżnej Pani i inne opowieści</em></strong></li>
+<li>Karel Michal, <strong>Straszydła na co dzień</strong></li>
+<li>Evżen Boćek, <strong>Arystokratka na koniu,</strong></li>
+<li>Evżen Boćek,<strong> Arystokratka w ukropie</strong></li>
+<li>Evżen Boćek,<strong> Ostatnia Arystokratka<br /></strong><br /></li>
+</ul>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="left"><span class="citation">Dominują czescy autorzy, ale moim zdaniem tylko oni mają to poczucie humoru w tej części Europy, który można nazwać zdrowym.</span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="left"><span class="citation">Gwarantowana dawka dobrego humoru, świetnej zabawy literackimi konwencjami. Ten mój zestaw antystresowy przetestowany został w moim bliskim i tym nieco dalszym otoczeniu - na rodzinie, przyjaciołach i części znajomych. Nikt nie wnosił reklamacji! </span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="left"><span class="citation">A jaki jest Twój "Książkowy Pakiet Antystresowy"? Napisz - <a href="mailto:redakcja@ksiazka.net.pl">redakcja@ksiazka.net.pl</a></span></p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="left"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;" align="left"><span class="citation">Gabriel Leonard Kamiński </span></p>
