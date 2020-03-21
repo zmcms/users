@@ -6,8 +6,11 @@ use URL;
 class ZmcmsUsers
 {
 	public function handle($request, Closure $next){
-		if(!$this->isLoggedIn())
-			return redirect(Config('zmcms.main.backend_prefix').'/login');
+		session()->regenerate();
+		Session::put('theme_name', Config('zmcms.main.theme_name'));
+		if(!$this->isLoggedIn()){
+				return redirect(Config('zmcms.main.backend_prefix').'/login');
+		}
 		return $next($request);
 	}
 	private function isLoggedIn(){
