@@ -11,7 +11,7 @@ class ZmcmsUsersController extends \App\Http\Controllers\Controller
 	}
 	public function zmcms_users_frm_panel(){
 		$data = \Zmcms\Users\Backend\Db\Queries::get_user_data(Session::get('backend_user')['token']);
-		return view('themes.zmcms.backend.zmcms_users_frm_account', compact('data'));
+		return view('themes.'.Config('zmcms.frontend.theme_name').'.backend.zmcms_users_frm_account', compact('data'));
 	}
 	public function zmcms_users_logout(){
 		Session::forget('backend_user');
