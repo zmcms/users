@@ -9,7 +9,7 @@
 	],
 	"autoload": {
         "psr-4": {
-			"Zmcms\\Users\\": ""
+			"Zmcms\\Users\\": "src/"
 	    },
        "files": ["src/helpers.php"]
     },
