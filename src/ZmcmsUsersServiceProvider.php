@@ -31,6 +31,7 @@ class ZmcmsUsersServiceProvider extends ServiceProvider{
 		$this->publishes([
 			__DIR__.'/backend/views' => base_path('resources/views/themes/zmcms/backend'),
 			__DIR__.'/frontend/views' => base_path('resources/views/themes/zmcms/frontend'),
+			__DIR__.'/frontend/views/users' => base_path('resources/views/themes/zmcms/frontend/users'),
 			__DIR__.'/config' => base_path('config/zmcms'),
 			__DIR__.'/backend/css' => base_path('public/themes/zmcms/backend/css'),
 			__DIR__.'/frontend/css' => base_path('public/themes/zmcms/frontend/css'),
