@@ -12,11 +12,6 @@ class ZmcmsUsersServiceProvider extends ServiceProvider{
 	}
 
 	public function boot(){
-		$this->app['router']->middlewareGroup('FrontendLoggedInUser', []);
-		if(Config::has(Config('zmcms.frontend.theme_name').'.middleware')){
-			$m=Config(Config('zmcms.frontend.theme_name').'.middleware.frontend_user_logged_in');
-			foreach($m as $n)$this->app['router']->pushMiddlewareToGroup('FrontendLoggedInUser', $n);
-		}
 		// Ładowanie routiongów frontendu
 		$mod_path = base_path().DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR;
 		if(is_array(Config(Config('zmcms.frontend.theme_name').'.routes.frontend'))){
@@ -38,6 +33,11 @@ class ZmcmsUsersServiceProvider extends ServiceProvider{
 			__DIR__.'/backend/js' => base_path('public/themes/zmcms/backend/js'),
 			__DIR__.'/frontend/js' => base_path('public/themes/zmcms/frontend/js'),
 		]);
+		$this->app['router']->middlewareGroup('FrontendLoggedInUser', []);
+		if(Config::has(Config('zmcms.frontend.theme_name').'.middleware')){
+			$m=Config(Config('zmcms.frontend.theme_name').'.middleware.frontend_user_logged_in');
+			foreach($m as $n)$this->app['router']->pushMiddlewareToGroup('FrontendLoggedInUser', $n);
+		}
 		View::addLocation(__DIR__.DIRECTORY_SEPARATOR.'backend'.DIRECTORY_SEPARATOR.'views');
 		View::addLocation(__DIR__.DIRECTORY_SEPARATOR.'frontend'.DIRECTORY_SEPARATOR.'views');
 	}
