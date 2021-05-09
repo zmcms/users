@@ -17,4 +17,15 @@ class ZmcmsUsersController extends \App\Http\Controllers\Controller
 		Session::forget('backend_user');
 		return redirect(Config('zmcms.main.backend_prefix').'/login');
 	}
+	public function zmcms_users_frm_panel_save(Request $request){
+		$data = print_r($request->all());
+		return '<p style="color: #fff"><pre>'.$data.'</pre></p>';
+	}
+	public function zmcms_users_frm_panel_new_user(Request $request){
+		return '<p style="color: #fff">zmcms_users_frm_panel_new_user</p>';
+	}
+	public function zmcms_users_frm_panel_delete_user(Request $request){
+		return '<p style="color: #fff">zmcms_users_frm_panel_delete_user</p>';
+	}
+
 }

@@ -17,6 +17,7 @@
 			"Zmcms\\Users\\Frontend\\Controllers\\":"src/frontend/controllers/",
 			"Zmcms\\Users\\Frontend\\Middleware\\":"src/frontend/middleware/",
 			"Zmcms\\Users\\Frontend\\Routes\\":"src/frontend/routes/",
+			"Zmcms\\Users\\Frontend\\Db\\":"src/frontend/db/",
 			"Zmcms\\Users\\Migrations\\":"src/migrations/",
 			"Zmcms\\Users\\":"src/"
 	    },

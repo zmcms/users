@@ -2,6 +2,7 @@
 namespace Zmcms\Users;
 use Illuminate\Support\ServiceProvider;
 use View;
+use Config;
 class ZmcmsUsersServiceProvider extends ServiceProvider{
 
 	public function register(){
@@ -11,6 +12,18 @@ class ZmcmsUsersServiceProvider extends ServiceProvider{
 	}
 
 	public function boot(){
+		$this->app['router']->middlewareGroup('FrontendLoggedInUser', []);
+		if(Config::has(Config('zmcms.frontend.theme_name').'.middleware')){
+			$m=Config(Config('zmcms.frontend.theme_name').'.middleware.frontend_user_logged_in');
+			foreach($m as $n)$this->app['router']->pushMiddlewareToGroup('FrontendLoggedInUser', $n);
+		}
+		// Ładowanie routiongów frontendu
+		$mod_path = base_path().DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR;
+		if(is_array(Config(Config('zmcms.frontend.theme_name').'.routes.frontend'))){
+			foreach(Config(Config('zmcms.frontend.theme_name').'.routes.frontend') as $r){
+				$this->loadRoutesFrom($mod_path.$r);
+			}	
+		}
 		// $this->loadRoutesFrom(__DIR__.DIRECTORY_SEPARATOR.'backend'.DIRECTORY_SEPARATOR.'routes'.DIRECTORY_SEPARATOR.'users.php');
 		// $this->loadRoutesFrom(__DIR__.DIRECTORY_SEPARATOR.'backend'.DIRECTORY_SEPARATOR.'routes'.DIRECTORY_SEPARATOR.'users_console.php');
 		// $this->loadRoutesFrom(__DIR__.DIRECTORY_SEPARATOR.'frontend'.DIRECTORY_SEPARATOR.'routes'.DIRECTORY_SEPARATOR.'users.php');
